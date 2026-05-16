@@ -3,6 +3,10 @@
    ══════════════════════════════════ */
 
 /* ── 2. Features ───────────────────── */
+.home {
+  background: var(--bg-primary);
+}
+
 .home__features {
   background: var(--bg-primary);
 }
@@ -70,6 +74,9 @@
   grid-template-columns: 1fr 1.2fr;
   gap: 80px;
   align-items: center;
+}
+.home__about-content {
+  min-width: 0;
 }
 .home__about-visual {
   position: relative;

@@ -134,3 +134,14 @@
   flex-shrink: 0;
   font-size: 1em;
 }
+
+.cafex-btn__icon--left { margin-left: -2px; }
+.cafex-btn__icon--right { margin-right: -2px; }
+
+.cafex-btn__label {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

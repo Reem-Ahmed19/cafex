@@ -30,6 +30,11 @@
 }
 
 /* ── Brand ────────────────────────── */
+.footer__brand,
+.footer__col {
+  min-width: 0;
+}
+
 .footer__logo {
   display: flex;
   align-items: center;

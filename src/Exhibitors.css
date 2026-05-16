@@ -1,3 +1,11 @@
+.exhibitors {
+  background: var(--bg-primary);
+}
+
+.exhibitors__main {
+  background: linear-gradient(180deg, var(--bg-primary), var(--dark-roast));
+}
+
 .exhibitors__controls {
   display: flex;
   flex-direction: column;
@@ -30,6 +38,11 @@
 .exhibitors__search:focus {
   outline: none;
   border-color: var(--caramel);
+}
+.exhibitors__filter {
+  max-width: 100%;
+  overflow-x: auto;
+  padding-bottom: 2px;
 }
 .exhibitors__count {
   font-size: 13px;
