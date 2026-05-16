@@ -1,0 +1,5 @@
+.subtitle { font-family: var(--font-body); line-height: 1.75; color: var(--text-secondary); }
+.subtitle--sm { font-size: 14px; }
+.subtitle--md { font-size: 16px; }
+.subtitle--lg { font-size: 18px; }
+.subtitle--muted { color: var(--text-muted); }

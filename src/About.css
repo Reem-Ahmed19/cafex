@@ -1,0 +1,144 @@
+/* ── Shared page styles ─────────── */
+.page-main { padding-top: 80px; }
+
+.page-hero {
+  padding: 80px 0 60px;
+  background: linear-gradient(160deg, var(--medium-roast), var(--dark-roast));
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+.page-hero__eyebrow {
+  font-size: 11px;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--caramel);
+  margin-bottom: 12px;
+}
+.page-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 7vw, 72px);
+  font-weight: 800;
+  color: var(--cream);
+  margin-bottom: 12px;
+}
+.page-hero__title em {
+  font-style: italic;
+  background: linear-gradient(100deg, var(--caramel), var(--gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.page-hero__sub {
+  font-size: 16px;
+  color: var(--text-secondary);
+}
+
+/* ── About ──────────────────────── */
+.about__mission-inner {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.about__mission-text p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.85;
+}
+.about__mission-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about__mission-icon {
+  font-size: 120px;
+  animation: float 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 40px rgba(200,169,126,.4));
+}
+
+/* Timeline */
+.about__timeline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+  padding-left: 32px;
+}
+.about__timeline-list::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0; bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--caramel), transparent);
+}
+.about__milestone {
+  display: grid;
+  grid-template-columns: 60px 20px 1fr;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+}
+.about__milestone:last-child { border-bottom: none; }
+.about__milestone-year {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--caramel);
+}
+.about__milestone-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--caramel);
+  box-shadow: 0 0 10px rgba(200,169,126,.5);
+  flex-shrink: 0;
+}
+.about__milestone-event {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Team */
+.about__team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.about__team-card {
+  background: var(--medium-roast);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px 20px;
+  text-align: center;
+  transition: transform var(--dur-base), border-color var(--dur-base);
+}
+.about__team-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(200,169,126,.35);
+}
+.about__team-avatar {
+  font-size: 56px;
+  margin-bottom: 16px;
+}
+.about__team-name {
+  font-family: var(--font-display);
+  font-size: 17px;
+  color: var(--cream);
+  margin-bottom: 6px;
+}
+.about__team-role {
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: .08em;
+}
+
+@media (max-width: 900px) {
+  .about__mission-inner { grid-template-columns: 1fr; }
+  .about__team-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .about__team-grid { grid-template-columns: 1fr; }
+}

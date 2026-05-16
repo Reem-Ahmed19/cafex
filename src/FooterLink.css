@@ -1,0 +1,7 @@
+.footer-link {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  transition: color var(--dur-base), padding-left var(--dur-base);
+  display: inline-block;
+}
+.footer-link:hover { color: var(--cream); padding-left: 6px; }

@@ -1,0 +1,110 @@
+/* ── 404 Page ───────────────────── */
+.not-found {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.not-found__bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 40%, rgba(90,40,15,.4), transparent 70%),
+    linear-gradient(180deg, var(--bg-primary), var(--dark-roast));
+}
+
+.not-found__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 120px var(--container-pad) 80px;
+}
+
+.not-found__cup {
+  font-size: 80px;
+  margin-bottom: 8px;
+  animation: float 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 24px rgba(200,169,126,.4));
+  display: block;
+}
+
+.not-found__steam {
+  position: relative;
+  height: 50px;
+  margin: 0 auto 24px;
+  width: 60px;
+}
+
+.not-found__wisp {
+  position: absolute;
+  bottom: 0;
+  width: 2px;
+  height: 40px;
+  border-radius: 4px;
+  filter: blur(2px);
+  animation: steam 2.5s ease-out infinite;
+  background: linear-gradient(to top, rgba(200,169,126,.5), transparent);
+}
+.not-found__wisp--1 { left: 8px;  animation-delay: 0s; }
+.not-found__wisp--2 { left: 28px; animation-delay: .7s; height: 50px; }
+.not-found__wisp--3 { left: 48px; animation-delay: 1.4s; }
+
+.not-found__code {
+  font-family: var(--font-display);
+  font-size: clamp(100px, 18vw, 180px);
+  font-weight: 900;
+  line-height: 1;
+  background: linear-gradient(135deg, rgba(200,169,126,.15), rgba(200,169,126,.04));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  user-select: none;
+  margin-bottom: -20px;
+}
+
+.not-found__title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 700;
+  color: var(--cream);
+  margin-bottom: 16px;
+}
+
+.not-found__desc {
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  max-width: 420px;
+  margin: 0 auto 36px;
+}
+
+.not-found__actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.not-found__links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  font-size: 13px;
+}
+.not-found__links a {
+  color: var(--text-muted);
+  transition: color var(--dur-base);
+  letter-spacing: .06em;
+}
+.not-found__links a:hover { color: var(--caramel); }
+
+@media (max-width: 480px) {
+  .not-found__actions { flex-direction: column; align-items: center; }
+  .not-found__actions .btn { width: 100%; max-width: 280px; }
+}

@@ -1,0 +1,102 @@
+/* ── SectionTitle ───────────────── */
+.section-title {
+  margin-bottom: 56px;
+}
+
+/* Alignment variants */
+.section-title--center { text-align: center; }
+.section-title--left   { text-align: left; }
+.section-title--right  { text-align: right; }
+
+/* ── Eyebrow ────────────────────── */
+.section-title__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--caramel);
+  margin-bottom: 14px;
+  justify-content: inherit;
+  width: 100%;
+}
+.section-title--center .section-title__eyebrow {
+  justify-content: center;
+}
+.section-title--left .section-title__eyebrow {
+  justify-content: flex-start;
+}
+
+.section-title__dash {
+  display: inline-block;
+  width: 28px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--caramel), transparent);
+  flex-shrink: 0;
+}
+
+/* ── Heading ────────────────────── */
+.section-title__heading {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -.02em;
+  color: var(--cream);
+  margin-bottom: 16px;
+}
+
+/* For light-bg variant */
+.section-title--light .section-title__heading {
+  color: var(--espresso);
+}
+
+/* ── Subtitle ───────────────────── */
+.section-title__subtitle {
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  max-width: 520px;
+  margin-top: 8px;
+}
+.section-title--center .section-title__subtitle {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-title--light .section-title__subtitle {
+  color: var(--rich-brown);
+}
+
+/* ── Ornament ───────────────────── */
+.section-title__ornament {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  justify-content: inherit;
+}
+.section-title--center .section-title__ornament {
+  justify-content: center;
+}
+.section-title--left .section-title__ornament {
+  justify-content: flex-start;
+}
+
+.section-title__ornament span:not(.section-title__diamond) {
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--caramel));
+}
+.section-title__ornament span:last-child {
+  background: linear-gradient(90deg, var(--caramel), transparent);
+}
+
+.section-title__diamond {
+  font-size: 7px;
+  color: var(--caramel);
+  opacity: .8;
+}

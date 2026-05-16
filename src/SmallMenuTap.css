@@ -1,0 +1,31 @@
+.small-menu-tap {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.small-menu-tap__item {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  background: transparent;
+  cursor: pointer;
+  transition: all var(--dur-base);
+}
+
+.small-menu-tap__item:hover {
+  color: var(--caramel);
+  border-color: var(--caramel);
+}
+
+.small-menu-tap__item--active {
+  background: rgba(200,169,126,.12);
+  border-color: var(--caramel);
+  color: var(--caramel);
+  font-weight: 700;
+}
